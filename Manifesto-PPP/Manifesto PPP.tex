@@ -1,0 +1,56 @@
+
+
+\documentclass[a4paper,12pt]{article}
+% Definicao de dimensoes de margens
+\usepackage[hscale=0.7,vscale=0.8]{geometry}
+% Estilo  de Numeracao de paginas (arabic, roman, Roman, alph, Alph)
+\pagenumbering{arabic}
+
+%\documentclass[12pt]{article}
+
+% -------- Suporte Lingua Portuguesa e acentuação -------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+% Utilizar fonte "Times New Roman"
+\usepackage{times}
+
+% -----------------------
+\usepackage{datetime}
+\usepackage{hyperref}
+\usepackage[ampersand]{easylist}
+\usepackage{amssymb}
+
+%-------- \subtitle command -------%
+\usepackage{titling}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+% -------- \email command ---------------
+\newcommand{\email}[1]{%
+	\href{mailto:#1}{#1}
+}
+% -----------------------
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3} 
+
+\title{Manifesto do Partido Pirata Português}
+\subtitle{Versão 2.2}
+
+\author{
+        \href{http://partidopiratapt.eu/}{Partido Pirata Português}, \email{geral@partidopiratapt.eu}\\
+}
+\date{Revisão de \today~\currenttime}
+
+\begin{document}
+\maketitle
+\include{conteudo}
+
+\bibliographystyle{abbrv}
+\bibliography{referencias}
+
+\end{document}
